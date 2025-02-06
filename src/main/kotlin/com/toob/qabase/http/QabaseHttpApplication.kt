@@ -1,4 +1,4 @@
-package com.toob.qabase_http
+package com.toob.qabase.http
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
