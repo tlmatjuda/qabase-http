@@ -93,11 +93,6 @@
 		<!-- Allure -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-selenide</artifactId>
-			<version>${allure.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-junit5</artifactId>
 			<version>${allure.version}</version>
 		</dependency>
