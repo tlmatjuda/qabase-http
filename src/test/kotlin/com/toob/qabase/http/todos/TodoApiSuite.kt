@@ -2,21 +2,20 @@ package com.toob.qabase.http.todos
 
 import com.toob.qabase.http.core.AllureExtensions
 import com.toob.qabase.http.core.AllureExtensions.step
-import com.toob.qabase.http.core.QaBaseTest
-import com.toob.qabase.http.core.RestClient
-import io.restassured.RestAssured
+import com.toob.qabase.http.core.BaseSuite
+import com.toob.qabase.http.core.RestClientSupport
 import org.hamcrest.Matchers.greaterThan
 import org.junit.jupiter.api.DisplayName
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class TodoApiTest : QaBaseTest() {
+class TodoApiSuite : BaseSuite() {
 
     @Test
     @DisplayName("Fetch All Tasks")
     fun fetchAllTodos() {
         val response = step("Send GET request to fetch all TODOs") {
-            RestClient.get("${RestAssured.baseURI}/todos")
+            RestClientSupport.get("/todos")
         }
 
         step("Verify response status code") {

@@ -7,11 +7,10 @@ import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS) // Allows non-static @BeforeAll
-abstract class QaBaseTest {
+abstract class BaseSuite {
 
     @BeforeAll
     fun setup() {
-
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com"
     }
 }
