@@ -5,7 +5,7 @@ import io.restassured.RestAssured
 import io.restassured.http.ContentType
 import io.restassured.response.Response
 
-object RestClientSupport {
+object RestClient {
 
     fun get(endpoint: String): Response = request("GET", endpoint)
 
