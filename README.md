@@ -28,9 +28,6 @@ This project provides a flexible and extensible framework for automating REST AP
 
 ## Setup
 
----
-
-
 1. Clone the repository:
 
    ```bash
