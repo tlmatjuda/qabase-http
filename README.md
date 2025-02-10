@@ -63,6 +63,7 @@ fun `Create New Task`() {
     
     val requestBody = json.encodeToString(todo)
 
+    // Step through stages using hte custom framework support or util 'step()' operations
     val response = step("Creating a new TODO task") {
         RestClient.post("/todos", requestBody)
     }
