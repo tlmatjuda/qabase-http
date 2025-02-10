@@ -53,7 +53,8 @@ fun `Create New Task`() {
             title = "Implement Allure Reports with Kotlin and Spring Boot", 
             completed = false
     )
-
+    
+    // Configure your own JSON Serialisation using KotlinX. 
     val json = Json {
         prettyPrint = true
         ignoreUnknownKeys = true
@@ -66,6 +67,7 @@ fun `Create New Task`() {
         RestClient.post("/todos", requestBody)
     }
 
+    // Use the custom framework support or util operations.
     assertHttpStatusCode(201, response)
     attachApiResponse(response)
 }
