@@ -48,31 +48,15 @@ Here’s an example of a simple test case that demonstrates how to use this fram
 @Test
 @Story("Create a new TODO item")
 fun `Create New Task`() {
-    val todo = Todo(
-        userId = 1, 
-        title = "My New TODO", 
-        completed = false
-    )
+    val todo = Todo(userId = 1, title = "Implement Allure Reports with Kotlin and Spring Boot", completed = false)
+    val requestBody = json.encodeToString(todo)
 
-    val json = Json {
-        prettyPrint = true
-        ignoreUnknownKeys = true
-        encodeDefaults = true
-    }
-
-    val requestBody = Json.encodeToString(todo)
-
-    val response = step("Send POST request to create a new TODO") {
+    val response = step("Creating a new TODO task") {
         RestClient.post("/todos", requestBody)
     }
 
-    step("Verify response status code") {
-        assertEquals(201, response.statusCode)
-    }
-
-    step("Attach response to Allure report") {
-        attachResponse(response)
-    }
+    assertHttpStatusCode(201, response)
+    attachApiResponse(response)
 }
 ```
 

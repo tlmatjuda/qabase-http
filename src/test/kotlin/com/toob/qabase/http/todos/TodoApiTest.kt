@@ -1,16 +1,13 @@
 package com.toob.qabase.http.todos
 
-import com.toob.qabase.http.core.AllureExtensions
 import com.toob.qabase.http.core.AllureExtensions.step
 import com.toob.qabase.http.core.BaseSuite
 import com.toob.qabase.http.core.RestClient
 import io.qameta.allure.Epic
 import io.qameta.allure.Feature
 import io.qameta.allure.Story
-import io.restassured.response.Response
 import org.hamcrest.Matchers.greaterThan
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 @Epic("JSONPlaceholder API Tests")
 @Feature("TODOs API CRUD Operations")
