@@ -6,7 +6,7 @@
 	<groupId>com.toob</groupId>
 	<artifactId>qabase-http</artifactId>
 	<version>0.0.1</version>
-	<name>qabase-http</name>
+	<name>QABase - HTTP - Automation</name>
 	<description>HTTP Rest Test Automation Template</description>
 
 
@@ -19,6 +19,8 @@
 		<spring-boot.version>3.4.2</spring-boot.version>
 
 		<rest-assured.version>5.5.0</rest-assured.version>
+		<kotlinx-serialization-json.version>1.8.0</kotlinx-serialization-json.version>
+
 		<allure.version>2.29.0</allure.version>
 		<aspectj.version>1.9.22.1</aspectj.version>
 
@@ -103,6 +105,11 @@
 			<artifactId>rest-assured</artifactId>
 			<version>${rest-assured.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlinx</groupId>
+			<artifactId>kotlinx-serialization-json-jvm</artifactId>
+			<version>${kotlinx-serialization-json.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -146,12 +153,19 @@
 					</args>
 					<compilerPlugins>
 						<plugin>spring</plugin>
+						<plugin>kotlinx-serialization</plugin>
 					</compilerPlugins>
 				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.jetbrains.kotlin</groupId>
 						<artifactId>kotlin-maven-allopen</artifactId>
+						<version>${kotlin.version}</version>
+					</dependency>
+					<!-- Add this dependency for serialization -->
+					<dependency>
+						<groupId>org.jetbrains.kotlin</groupId>
+						<artifactId>kotlin-maven-serialization</artifactId>
 						<version>${kotlin.version}</version>
 					</dependency>
 				</dependencies>

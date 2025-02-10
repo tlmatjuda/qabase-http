@@ -15,7 +15,7 @@ object RestClient {
 
     fun delete(endpoint: String): Response = request("DELETE", endpoint)
 
-    @Step("Sending HTTP {method} request to : {endpoint}")
+    @Step("Sending HTTP \"{method}\" request to -> {endpoint}")
     private fun request(method: String, endpoint: String, body: Any? = null): Response {
         return RestAssured.given()
             .contentType(ContentType.JSON)
@@ -30,4 +30,5 @@ object RestClient {
             .log().all()
             .extract().response()
     }
+
 }
