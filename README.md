@@ -85,9 +85,9 @@ After running the tests, the Allure report will show:
 
 - **Test Name:** Create a new TODO item
 - **Status:** Passed
-
-* Attachments: Response body, screenshots, and logs
-  <br/>
+- **Attachments:** Response body, screenshots, and logs
+<br/>
+<br/>
 
 ![Image Alt text](static/reports-sample-todo-api.jpg "Allure Reports Sample")
 <br/>
