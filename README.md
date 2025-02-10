@@ -12,8 +12,8 @@ This project provides a flexible and extensible framework for automating REST AP
 - **REST Assured**: Simplifies the process of sending HTTP requests and validating responses.
 - **Allure Reports**: Rich, detailed test reports with attachments, screenshots, and status codes.
 - **Kotlin Serialization**: Handles JSON serialization and deserialization efficiently.
-  <br/>
-  <br/>
+<br/>
+<br/>
 
 ## Getting Started
 
@@ -27,6 +27,9 @@ This project provides a flexible and extensible framework for automating REST AP
   <br/>
 
 ### Setup
+
+---
+
 
 1. Clone the repository:
 
@@ -81,10 +84,15 @@ fun `Create New Task`() {
 
 ### Reports Example
 
+---
+
+
+
 After running the tests, the Allure report will show:
 
 - **Test Name:** Create a new TODO item
 - **Status:** Passed
+
 * Attachments: Response body, screenshots, and logs
   <br/>
 
@@ -92,8 +100,11 @@ After running the tests, the Allure report will show:
 <br/>
 <br/>
 
-
 ### Key Points:
+
+---
+
+
 
 - **Single Flow:** All setup steps (clone the repo, build, test, and view reports) are included in one seamless section. No separate sub-sections for different steps.
 - **Clear Command Flow:** The file includes all commands and steps from `mvn clean install` to generating the Allure report using `mvn allure:serve`, all presented in one continuous process.
