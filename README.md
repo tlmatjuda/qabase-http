@@ -48,7 +48,11 @@ Here’s an example of a simple test case that demonstrates how to use this fram
 @Test
 @Story("Create a new TODO item")
 fun `Create New Task`() {
-    val todo = Todo(userId = 1, title = "Implement Allure Reports with Kotlin and Spring Boot", completed = false)
+    val todo = Todo(
+            userId = 1, 
+            title = "Implement Allure Reports with Kotlin and Spring Boot", 
+            completed = false
+    )
 
     val json = Json {
         prettyPrint = true
