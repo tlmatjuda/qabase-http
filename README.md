@@ -26,7 +26,7 @@ This project provides a flexible and extensible framework for automating REST AP
   <br/>
   <br/>
 
-### Setup
+## Setup
 
 ---
 
@@ -43,7 +43,7 @@ This project provides a flexible and extensible framework for automating REST AP
    <br/>
    <br/>
 
-### Test Case Example
+## Test Case Example
 
 Here’s an example of a simple test case that demonstrates how to use this framework to test a REST API :
 
@@ -82,11 +82,7 @@ fun `Create New Task`() {
 <br/>
 <br/>
 
-### Reports Example
-
----
-
-
+## Reports Example
 
 After running the tests, the Allure report will show:
 
@@ -100,11 +96,7 @@ After running the tests, the Allure report will show:
 <br/>
 <br/>
 
-### Key Points:
-
----
-
-
+## Key Points:
 
 - **Single Flow:** All setup steps (clone the repo, build, test, and view reports) are included in one seamless section. No separate sub-sections for different steps.
 - **Clear Command Flow:** The file includes all commands and steps from `mvn clean install` to generating the Allure report using `mvn allure:serve`, all presented in one continuous process.
